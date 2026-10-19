@@ -4,66 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional portfolio of Md. Rasedul Karim, apparel quality assurance and technical leadership professional.">
-  <title>Md. Rasedul Karim | Apparel Quality & Leadership</title>
+
+  <meta name="description" content="Md. Rasedul Karim — Apparel Quality Assurance Manager with 16+ years of experience in quality management, factory performance, buyer compliance, and technical leadership.">
+
+  <meta name="theme-color" content="#14243b">
+
+  <title>Md. Rasedul Karim | Apparel Quality & Technical Leadership</title>
+
   <style>
     :root {
       --navy: #14243b;
-      --blue: #2457a7;
-      --gold: #c9a45c;
-      --paper: #f6f8fb;
-      --ink: #263449;
-      --muted: #637187;
+      --navy-light: #203956;
+      --blue: #315fa5;
+      --gold: #d5b36a;
+      --background: #f5f7fb;
       --white: #ffffff;
+      --text: #28364a;
+      --muted: #66758a;
+      --border: #e1e7ef;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(20, 36, 59, 0.07);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.7;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.75;
     }
-    a { color: var(--blue); }
-    .container { width: min(1080px, 90%); margin: auto; }
-    header {
-      background: var(--white);
-      border-bottom: 1px solid #e4e9f0;
+
+    a {
+      color: var(--blue);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    .site-header {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
     }
-    nav {
-      min-height: 70px;
+
+    .navigation {
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 22px;
     }
+
     .brand {
-      font-weight: 800;
       color: var(--navy);
       text-decoration: none;
       font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
     }
+
     .nav-links {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      justify-content: flex-end;
       flex-wrap: wrap;
+      gap: 18px;
     }
+
     .nav-links a {
+      color: var(--text);
       text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
     }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
     .hero {
-      background: var(--navy);
+      background: linear-gradient(130deg, var(--navy), var(--navy-light));
       color: var(--white);
-      padding: 100px 0 90px;
+      padding: 86px 0 92px;
+      overflow: hidden;
     }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 240px;
+      align-items: center;
+      gap: 60px;
+    }
+
     .eyebrow {
       color: var(--gold);
       text-transform: uppercase;
@@ -71,339 +122,977 @@
       font-size: 12px;
       font-weight: 800;
     }
+
     h1 {
-      font-size: clamp(38px, 6vw, 65px);
-      line-height: 1.1;
-      margin: 18px 0;
+      font-size: clamp(38px, 5.5vw, 62px);
+      line-height: 1.12;
       letter-spacing: -1.5px;
+      margin: 18px 0;
     }
+
     .hero h2 {
-      color: #e8c77e;
-      font-size: clamp(20px, 3vw, 27px);
-      font-weight: 500;
+      color: var(--gold);
+      font-size: clamp(19px, 2.5vw, 25px);
+      font-weight: 600;
+      line-height: 1.45;
       margin: 0 0 20px;
     }
-    .hero p {
-      max-width: 680px;
-      color: #d6deea;
+
+    .hero-description {
+      color: #e0e7f1;
       font-size: 17px;
+      max-width: 690px;
     }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
+
+    .hero-note {
+      color: #bfcddd;
+      font-size: 13px;
+      margin-top: 24px;
+    }
+
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 5px solid var(--gold);
+      background: #e7ebf1;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .photo-caption {
+      text-align: center;
+      color: #d4ddea;
+      font-size: 12px;
+      margin-top: 14px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 11px 19px;
+      border: 1px solid transparent;
       border-radius: 7px;
+      font-size: 14px;
       font-weight: 700;
       text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
     }
-    .btn-gold { background: var(--gold); color: var(--navy); }
-    .btn-outline { border: 1px solid #8492a7; color: white; }
-    section { padding: 70px 0; }
-    .section-title { color: var(--navy); font-size: 30px; margin: 0 0 12px; }
-    .intro { max-width: 750px; color: var(--muted); }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .button-light {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .button-outline {
+      color: var(--white);
+      border-color: #9eacc0;
+    }
+
+    .button-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      color: var(--navy);
+      font-size: clamp(27px, 3.5vw, 35px);
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 0;
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-header {
+      margin-bottom: 30px;
+    }
+
+    .section-alt {
+      background: #eaf0f7;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 0 0 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .card p + p {
+      margin-top: 12px;
+    }
+
+    .detail-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .detail-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .detail-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-list strong {
+      color: var(--navy);
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
-      margin-top: 28px;
     }
-    .card {
-      background: var(--white);
-      border: 1px solid #e5eaf1;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 5px 20px rgba(20,36,59,.035);
+
+    .expertise-card {
+      border-top: 4px solid var(--gold);
     }
-    .card h3 { color: var(--navy); margin-top: 0; }
-    .card p, .card li { color: var(--muted); }
+
+    .number {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 26px;
+    }
+
     .tag {
       display: inline-block;
-      background: #edf2fa;
-      color: #244c86;
-      border-radius: 5px;
-      padding: 5px 9px;
-      margin: 4px 3px 4px 0;
+      background: var(--white);
+      color: var(--navy);
+      border: 1px solid #dce4ef;
+      padding: 7px 12px;
+      border-radius: 6px;
       font-size: 12px;
       font-weight: 700;
     }
-    .alt { background: #edf1f7; }
-    .timeline { border-left: 3px solid var(--gold); padding-left: 22px; margin-top: 28px; }
-    .timeline-item { margin: 0 0 28px; }
-    .timeline-item h3 { margin: 0; color: var(--navy); }
-    .timeline-item p { margin: 6px 0; color: var(--muted); }
-    .callout {
-      background: var(--navy);
-      color: white;
-      border-radius: 14px;
-      padding: 32px;
+
+    .timeline {
+      margin: 30px 0 0 8px;
+      padding-left: 26px;
+      border-left: 3px solid var(--gold);
     }
-    .callout h2 { margin-top: 0; }
-    .callout p { color: #d6deea; }
-    .contact-link { color: white; }
-    footer {
-      padding: 26px 0;
-      background: #0d192a;
-      color: #d6deea;
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 30px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: 7px;
+      width: 11px;
+      height: 11px;
+      background: var(--blue);
+      border: 3px solid var(--background);
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      margin: 0 0 5px;
+      font-size: 19px;
+    }
+
+    .timeline-role {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 780px;
+    }
+
+    .notice {
+      background: #fff8e9;
+      border-left: 4px solid var(--gold);
+      color: #6b572f;
+      border-radius: 5px;
+      padding: 15px 18px;
       font-size: 13px;
+      margin-top: 28px;
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .service-card p {
+      flex: 1;
+    }
+
+    .service-status {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .education-card {
+      margin-bottom: 18px;
+    }
+
+    .education-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact-section .section-heading {
+      color: var(--white);
+    }
+
+    .contact-section .section-intro {
+      color: #d3dce8;
+    }
+
+    .contact-card {
+      margin-top: 30px;
+      background: #203956;
+      border: 1px solid #405773;
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
+      color: #d5deea;
+    }
+
+    .contact-row strong {
+      min-width: 105px;
+      color: var(--gold);
+    }
+
+    .contact-row a {
+      color: var(--white);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-buttons {
+      margin-top: 25px;
+    }
+
+    footer {
+      padding: 25px 0;
+      background: #0b1626;
+      color: #c4cfde;
       text-align: center;
+      font-size: 12px;
     }
-    @media (max-width: 720px) {
-      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
-      .nav-links { gap: 12px; }
-      .grid { grid-template-columns: 1fr; }
-      .hero { padding: 68px 0; }
-      section { padding: 52px 0; }
+
+    footer p {
+      margin: 4px 0;
     }
-  </style.profile-photo {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--gold);
-  margin-bottom: 18px;
-}>
+
+    @media (max-width: 800px) {
+      .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 12px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 10px 16px;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-copy {
+        order: 2;
+      }
+
+      .hero-portrait {
+        order: 1;
+      }
+
+      .profile-photo {
+        width: 175px;
+        height: 175px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 91%;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0 60px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .button-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .card,
+      .contact-card {
+        padding: 21px;
+      }
+
+      .contact-row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <nav class="container">
-    <a class="brand" href="#home">RASEDUL KARIM</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#experience">Experience</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Main navigation">
+      <a class="brand" href="#home">RASEDUL KARIM</a>
 
-<main>
-  <section class="hero" id="home">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-content">
+
+        <div class="hero-copy">
+          <div class="eyebrow">
+            Apparel Quality • Technical Leadership
+          </div>
+
+          <h1>Md. Rasedul Karim</h1>
+
+          <h2>
+            Quality Assurance Manager |
+            Apparel Quality &amp; Technical Leadership
+          </h2>
+
+          <p class="hero-description">
+            Bringing 16+ years of apparel industry experience to
+            quality excellence, factory performance, buyer compliance,
+            team development, and continuous improvement.
+          </p>
+
+          <div class="button-group">
+            <a class="button button-gold" href="#experience">
+              Explore My Experience
+            </a>
+
+            <a class="button button-light"
+               href="Rasedul-Karim-CV.pdf"
+               target="_blank"
+               rel="noopener">
+              Download My CV
+            </a>
+
+            <a class="button button-outline"
+               href="https://www.linkedin.com/in/md-rasedul-karim-5b676aa9/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn Profile
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Quality systems. Stronger teams. Better factory performance.
+          </p>
+        </div>
+
+        <div class="hero-portrait">
+          <img
+            class="profile-photo"
+            src="profile.jpg"
+            alt="Professional portrait of Md. Rasedul Karim"
+            onerror="this.style.display='none'; document.getElementById('photo-fallback').hidden=false;"
+          >
+
+          <p class="photo-caption" id="photo-fallback" hidden>
+            Please upload your professional photo as profile.jpg
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Professional Profile</div>
+          <h2 class="section-heading">About Me</h2>
+          <p class="section-intro">
+            An experienced apparel quality professional focused on
+            building reliable systems, improving product quality,
+            developing people, and strengthening factory performance.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <article class="card">
+            <h3>My Professional Approach</h3>
+
+            <p>
+              With 16+ years of experience across garment manufacturing
+              and buying-house quality functions, I have developed
+              practical knowledge of buyer requirements, production
+              quality, factory audits, shipment readiness, and quality
+              team leadership.
+            </p>
+
+            <p>
+              I believe quality should be built into every stage of
+              production rather than inspected into the product at
+              the end. My approach emphasizes prevention, root-cause
+              analysis, accountability, teamwork, and continuous
+              improvement.
+            </p>
+
+            <p>
+              My long-term ambition is to contribute to senior quality
+              and technical leadership while sharing practical
+              knowledge through apparel quality training and
+              consultancy.
+            </p>
+          </article>
+
+          <aside class="card">
+            <h3>Professional Snapshot</h3>
+
+            <ul class="detail-list">
+              <li><strong>Experience:</strong> 16+ years</li>
+              <li><strong>Industry:</strong> Apparel and garments</li>
+              <li><strong>Core focus:</strong> Quality management</li>
+              <li><strong>Additional focus:</strong> Technical leadership</li>
+              <li><strong>Team focus:</strong> Training and development</li>
+              <li><strong>Location:</strong> Bangladesh</li>
+            </ul>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-alt" id="expertise">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">What I Do</div>
+          <h2 class="section-heading">Core Expertise</h2>
+          <p class="section-intro">
+            Practical experience and professional focus across
+            quality management, factory performance, and leadership.
+          </p>
+        </div>
+
+        <div class="grid">
+
+          <article class="card expertise-card">
+            <span class="number">01 / QUALITY</span>
+            <h3>Quality Management</h3>
+            <p>
+              Inspection systems, defect prevention, workmanship,
+              measurement control, root-cause analysis, corrective
+              actions, and shipment quality.
+            </p>
+          </article>
+
+          <article class="card expertise-card">
+            <span class="number">02 / COMPLIANCE</span>
+            <h3>Buyer &amp; Factory Standards</h3>
+            <p>
+              Buyer requirements, factory audits, supplier
+              development, production monitoring, and shipment
+              readiness.
+            </p>
+          </article>
+
+          <article class="card expertise-card">
+            <span class="number">03 / LEADERSHIP</span>
+            <h3>Team Development</h3>
+            <p>
+              Quality team leadership, coaching, training,
+              cross-functional collaboration, and accountability.
+            </p>
+          </article>
+
+          <article class="card expertise-card">
+            <span class="number">04 / IMPROVEMENT</span>
+            <h3>Continuous Improvement</h3>
+            <p>
+              Quality performance monitoring, process improvement,
+              recurring defect reduction, and preventive actions.
+            </p>
+          </article>
+
+          <article class="card expertise-card">
+            <span class="number">05 / AUDITS</span>
+            <h3>Audit &amp; Process Readiness</h3>
+            <p>
+              Quality documentation, factory audit preparation,
+              process compliance, and improvement follow-up.
+            </p>
+          </article>
+
+          <article class="card expertise-card">
+            <span class="number">06 / TRAINING</span>
+            <h3>Knowledge Sharing</h3>
+            <p>
+              Practical learning for quality professionals and
+              production teams to strengthen quality ownership.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="tags" aria-label="Professional skills">
+          <span class="tag">ISO 9001:2015 QMS</span>
+          <span class="tag">Industry 4.0</span>
+          <span class="tag">Quality Audits</span>
+          <span class="tag">Root-Cause Analysis</span>
+          <span class="tag">Corrective Actions</span>
+          <span class="tag">Supplier Development</span>
+          <span class="tag">Lean Six Sigma Studies</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Career History</div>
+          <h2 class="section-heading">Professional Experience</h2>
+          <p class="section-intro">
+            Career experience spanning buying-house quality
+            management, factory quality leadership, inspections,
+            and product safety.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item">
+            <h3>Vogue Sourcing Bangladesh</h3>
+            <div class="timeline-role">
+              Quality Assurance Management
+            </div>
+            <p>
+              Quality management across assigned factory operations,
+              buyer compliance, supplier quality development,
+              inspection performance, audit readiness, and quality
+              team development.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Friends Knitting Ltd. / Debonair</h3>
+            <div class="timeline-role">
+              AGM / Quality Head
+            </div>
+            <p>
+              Factory-level quality leadership, quality operations,
+              and improvement of product and process standards.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Next Sourcing Ltd.</h3>
+            <div class="timeline-role">QA Inspector</div>
+            <p>
+              Production quality monitoring, PPM, first-production
+              checks, inline inspections, pre-final checks, and
+              final inspections.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Kadena Sportswear</h3>
+            <div class="timeline-role">Section Leader — QA</div>
+            <p>
+              Quality monitoring and coordination of garment
+              quality activities.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Youngone CEPZ</h3>
+            <div class="timeline-role">
+              Product Safety Manager / Team Leader
+            </div>
+            <p>
+              Product safety and buyer-specific quality requirements
+              within apparel manufacturing operations.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="notice">
+          Please verify official job titles, employer names, and
+          employment dates before using this section as your final
+          professional career record.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-alt" id="achievements">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Professional Impact</div>
+          <h2 class="section-heading">Achievements &amp; Improvement</h2>
+          <p class="section-intro">
+            Areas where I focus on delivering value to businesses,
+            factories, quality teams, and customers.
+          </p>
+        </div>
+
+        <div class="grid">
+
+          <article class="card">
+            <h3>Quality Excellence</h3>
+            <p>
+              Strengthening preventive quality controls, identifying
+              recurring defects, and improving inspection and
+              shipment-readiness processes.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>People Development</h3>
+            <p>
+              Developing quality capability through practical
+              training, coaching, clear responsibilities, and
+              stronger factory-level ownership.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Continuous Improvement</h3>
+            <p>
+              Applying data-driven reviews, root-cause analysis,
+              corrective actions, and follow-up to improve
+              process consistency.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="notice">
+          The next portfolio upgrade will include verified,
+          measurable achievements and selected case studies.
+          Confidential buyer, factory, and company information
+          will not be published.
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Future Business</div>
+          <h2 class="section-heading">Consultancy &amp; Training</h2>
+          <p class="section-intro">
+            Professional service areas I aim to develop to support
+            apparel manufacturers, suppliers, and quality teams.
+          </p>
+        </div>
+
+        <div class="grid">
+
+          <article class="card service-card">
+            <span class="service-status">Planned service</span>
+            <h3>Factory Quality Improvement</h3>
+            <p>
+              Practical support for defect analysis, quality
+              controls, inspection processes, and corrective-action
+              planning.
+            </p>
+          </article>
+
+          <article class="card service-card">
+            <span class="service-status">Planned service</span>
+            <h3>QA Professional Training</h3>
+            <p>
+              Training topics covering garment inspection,
+              measurements, workmanship, buyer requirements,
+              and preventive quality.
+            </p>
+          </article>
+
+          <article class="card service-card">
+            <span class="service-status">Planned service</span>
+            <h3>Quality Systems &amp; Audits</h3>
+            <p>
+              Guidance on quality documentation, audit preparation,
+              process compliance, and continuous improvement.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="section-intro" style="margin-top:22px">
+          These are future service areas. Availability, scope,
+          and engagement arrangements will be confirmed when
+          the consultancy is formally launched.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section-alt" id="education">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Education &amp; Development</div>
+          <h2 class="section-heading">Academic &amp; Professional Learning</h2>
+        </div>
+
+        <article class="card education-card">
+          <h3>Postgraduate Diploma in Textile Industry Management</h3>
+          <p>
+            Bangladesh University of Textiles (BUTEX).
+          </p>
+        </article>
+
+        <article class="card education-card">
+          <h3>Quality Management Systems</h3>
+          <p>
+            ISO 9001:2015 QMS training.
+          </p>
+        </article>
+
+        <article class="card education-card">
+          <h3>Digital Manufacturing &amp; Industry 4.0</h3>
+          <p>
+            Professional learning in digital manufacturing
+            and industrial transformation.
+          </p>
+        </article>
+
+        <article class="card education-card">
+          <h3>Lean Six Sigma</h3>
+          <p>
+            Green Belt learning and professional development.
+            Certification status should be stated accurately.
+          </p>
+        </article>
+
+        <div class="notice">
+          Confirm the exact qualification names, awarding institutions,
+          and certification status before final publication.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-heading">Build Better Quality Together</h2>
+
+        <p class="section-intro">
+          I welcome professional connections, leadership
+          opportunities, knowledge sharing, and future collaborations
+          in apparel quality and technical improvement.
+        </p>
+
+        <div class="contact-card">
+
+          <div class="contact-row">
+            <strong>Email</strong>
+            <a href="mailto:rajibctg007@gmail.com">
+              rajibctg007@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-row">
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/md-rasedul-karim-5b676aa9/"
+               target="_blank"
+               rel="noopener noreferrer">
+              linkedin.com/in/md-rasedul-karim-5b676aa9
+            </a>
+          </div>
+
+          <div class="contact-row">
+            <strong>Location</strong>
+            <span>Bangladesh</span>
+          </div>
+
+          <div class="button-group contact-buttons">
+            <a class="button button-gold"
+               href="mailto:rajibctg007@gmail.com">
+              Contact Me by Email
+            </a>
+
+            <a class="button button-outline"
+               href="https://www.linkedin.com/in/md-rasedul-karim-5b676aa9/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Connect on LinkedIn
+            </a>
+
+            <a class="button button-light"
+               href="Rasedul-Karim-CV.pdf"
+               target="_blank"
+               rel="noopener">
+              View My CV
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
     <div class="container">
-      <div class="eyebrow">Apparel Quality • Technical Leadership</div>
-      <h1>Md. Rasedul Karim<img class="profile-photo"
-     src="profile.jpg"
-     alt="Professional portrait of Md. Rasedul Karim"></h1>
-      <h2>Quality Assurance & Apparel Industry Leader</h2>
       <p>
-        Helping apparel businesses strengthen product quality, improve
-        factory performance, develop capable teams, and deliver to
-        international buyer expectations.
+        &copy; <span id="current-year">2026</span>
+        Md. Rasedul Karim. All rights reserved.
       </p>
-      <div class="actions"<a class="btn btn-gold" href="Rasedul-Karim-CV.pdf"
-   target="_blank" rel="noopener">Download My CV</a>>
-        <a class="btn btn-gold" href="#experience">Explore My Experience</a>
-        <a class="btn btn-outline" href="#contact">Let's Connect</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="intro">
-        I am an apparel quality professional with 16+ years of industry
-        experience spanning factory quality operations, buying-house
-        quality management, buyer requirements, audit readiness, and
-        team leadership. My focus is on practical problem-solving,
-        preventive quality systems, continuous improvement, and building
-        accountability across production and quality teams.
-      </p>
-      <p class="intro">
-        I believe quality should be built into every stage of production,
-        not inspected into the product at the end. My professional goal
-        is to help organizations achieve consistent quality, stronger
-        factory performance, and sustainable improvement.
+      <p>
+        Apparel Quality Assurance | Technical Leadership |
+        Continuous Improvement
       </p>
     </div>
-  </section>
+  </footer>
 
-  <section class="alt" id="expertise">
-    <div class="container">
-      <h2 class="section-title">Core Expertise</h2>
-      <p class="intro">Key areas of experience and professional focus.</p>
-      <div class="grid">
-        <article class="card">
-          <h3>Quality Management</h3>
-          <p>Quality systems, inline and final inspections, defect
-          prevention, root-cause analysis, and corrective actions.</p>
-        </article>
-        <article class="card">
-          <h3>Buyer & Factory Performance</h3>
-          <p>Buyer standards, factory audits, supplier development,
-          shipment readiness, and quality performance monitoring.</p>
-        </article>
-        <article class="card">
-          <h3>People & Leadership</h3>
-          <p>Team development, quality training, accountability,
-          cross-functional collaboration, and continuous improvement.</p>
-        </article>
-      </div>
-      <div style="margin-top:22px">
-        <span class="tag">ISO 9001:2015 QMS</span>
-        <span class="tag">Lean Six Sigma — Green Belt Studies</span>
-        <span class="tag">Industry 4.0</span>
-        <span class="tag">Root-Cause Analysis</span>
-        <span class="tag">Quality Audits</span>
-        <span class="tag">Continuous Improvement</span>
-      </div>
-    </div>
-  </section>
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
 
-  <section id="experience">
-    <div class="container">
-      <h2 class="section-title">Career Journey</h2>
-      <p class="intro">
-        Experience across garment manufacturing and buying-house
-        quality functions.
-      </p>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Vogue Sourcing</h3>
-          <p><strong>Quality Assurance Management</strong></p>
-          <p>Supporting factory quality performance, buyer compliance,
-          supplier development, audit readiness, and quality-team
-          leadership across assigned operations.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Debonair / Friends Knitting Ltd.</h3>
-          <p><strong>AGM / Quality Head</strong></p>
-          <p>Quality leadership and factory-level quality management.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Next Sourcing Ltd.</h3>
-          <p><strong>QA Inspector</strong></p>
-          <p>Production monitoring, PPM, inline, pre-final, and final
-          quality inspections.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Kadena Sportswear & Youngone</h3>
-          <p><strong>Quality and Product Safety Roles</strong></p>
-          <p>Earlier experience in garment quality, product safety,
-          and buyer-specific quality requirements.</p>
-        </div>
-      </div>
-      <p class="intro">
-        Career dates, official job titles, and role descriptions should
-        be verified before publication.
-      </p>
-    </div>
-  </section>
-
-  <section class="alt" id="achievements">
-    <div class="container">
-      <h2 class="section-title">Achievements & Improvement</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Quality Excellence</h3>
-          <p>Focused on reducing recurring defects, strengthening
-          preventive controls, and improving shipment quality.</p>
-        </article>
-        <article class="card">
-          <h3>Team Development</h3>
-          <p>Committed to practical training, clearer responsibilities,
-          and stronger quality ownership at factory level.</p>
-        </article>
-        <article class="card">
-          <h3>Continuous Improvement</h3>
-          <p>Using quality data, root-cause analysis, audits, and
-          follow-up actions to support better decisions.</p>
-        </article>
-      </div>
-      <p class="intro" style="margin-top:20px">
-        Specific results and case studies will be added after verifying
-        the figures and removing confidential buyer or factory details.
-      </p>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Consultancy & Training</h2>
-      <p class="intro">
-        Future professional services I aim to develop for apparel
-        factories, suppliers, and quality professionals.
-      </p>
-      <div class="grid">
-        <article class="card">
-          <h3>Factory Quality Improvement</h3>
-          <p>Support for defect analysis, quality systems, inspection
-          processes, and corrective-action planning.</p>
-        </article>
-        <article class="card">
-          <h3>QA Team Training</h3>
-          <p>Practical learning on garment inspection, measurement,
-          workmanship, buyer requirements, and quality ownership.</p>
-        </article>
-        <article class="card">
-          <h3>Quality Systems & Audits</h3>
-          <p>Guidance on audit preparation, process compliance,
-          documentation, and continuous improvement.</p>
-        </article>
-      </div>
-      <p class="intro" style="margin-top:20px">
-        These are planned service areas, not a claim of an existing
-        consultancy business.
-      </p>
-    </div>
-  </section>
-
-  <section class="alt" id="education">
-    <div class="container">
-      <h2 class="section-title">Education & Professional Development</h2>
-      <div class="card">
-        <p><strong>Postgraduate Diploma:</strong> Textile Industry
-        Management — Bangladesh University of Textiles (BUTEX)</p>
-        <p><strong>Professional learning:</strong> ISO 9001:2015 Quality
-        Management Systems, Digital Manufacturing & Industry 4.0, and
-        Lean Six Sigma Green Belt studies.</p>
-        <p>Please confirm exact certificate titles and completion
-        status before publishing.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="callout">
-        <h2>Let's Connect</h2>
-        <p>
-          I welcome professional connections, leadership opportunities,
-          knowledge sharing, and future collaborations in apparel
-          quality and technical improvement.
-        </p>
-        <p>
-          <strong>Email:</strong>
-  <a class="contact-link"
-     href="mailto:rajibctg007@gmail.com">
-    rajibctg007@gmail.com
-  </a>
-        </p>
-        <p>
-          <strong>LinkedIn:</strong>
-  <a class="contact-link"
-     href="https://www.linkedin.com/in/md-rasedul-karim-5b676aa9/"
-     target="_blank" rel="noopener noreferrer">
-    Connect with me on LinkedIn
-  </a>
-        </p>
-        <p><strong>Location:</strong> Bangladesh</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    © <span id="year">2026</span> Md. Rasedul Karim.
-    Professional Portfolio.
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
 </body>
 </html>
